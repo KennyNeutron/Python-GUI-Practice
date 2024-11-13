@@ -13,6 +13,7 @@ str_FirstNumber = tk.StringVar()
 str_SecondNumber = tk.StringVar()
 this_operation = tk.IntVar()
 
+
 def Clicked_btn_Equal():
     print("pressed Equal")
     if this_operation.get()==1:
@@ -24,11 +25,41 @@ def Clicked_btn_Num1():
     print("pressed #1")
     CheckOperation(1)
 
-
 def Clicked_btn_Num2():
     print("pressed #2")
     CheckOperation(2)
 
+def Clicked_btn_Num3():
+    print("pressed #3")
+    CheckOperation(3)
+
+def Clicked_btn_Num4():
+    print("pressed #4")
+    CheckOperation(4)
+
+def Clicked_btn_Num5():
+    print("pressed #5")
+    CheckOperation(5)
+
+def Clicked_btn_Num6():
+    print("pressed #6")
+    CheckOperation(6)
+
+def Clicked_btn_Num7():
+    print("pressed #7")
+    CheckOperation(7)
+
+def Clicked_btn_Num8():
+    print("pressed #8")
+    CheckOperation(8)
+
+def Clicked_btn_Num9():
+    print("pressed #9")
+    CheckOperation(9)
+
+def Clicked_btn_Num0():
+    print("pressed #0")
+    CheckOperation(0)
 
 def Clicked_btn_Add():
     print("pressed Add")
@@ -79,13 +110,13 @@ btn_Subtract.grid(row=1, column=3)
 # ====================================================================
 
 # ====================================================================
-btn_Num7 = tk.Button(root, text="7", width=12, height=3)
+btn_Num7 = tk.Button(root, text="7", width=12, height=3, command=Clicked_btn_Num7)
 btn_Num7.grid(row=2, column=0)
 
-btn_Num8 = tk.Button(root, text="8", width=12, height=3)
+btn_Num8 = tk.Button(root, text="8", width=12, height=3, command=Clicked_btn_Num8)
 btn_Num8.grid(row=2, column=1)
 
-btn_Num9 = tk.Button(root, text="9", width=12, height=3)
+btn_Num9 = tk.Button(root, text="9", width=12, height=3, command=Clicked_btn_Num9)
 btn_Num9.grid(row=2, column=2)
 
 btn_Add = tk.Button(root, text="+", width=12, height=7, command=Clicked_btn_Add)
@@ -93,13 +124,13 @@ btn_Add.grid(row=2, column=3, rowspan=2)
 # ====================================================================
 
 # ====================================================================
-btn_Num4 = tk.Button(root, text="4", width=12, height=3)
+btn_Num4 = tk.Button(root, text="4", width=12, height=3, command=Clicked_btn_Num4)
 btn_Num4.grid(row=3, column=0)
 
-btn_Num5 = tk.Button(root, text="5", width=12, height=3)
+btn_Num5 = tk.Button(root, text="5", width=12, height=3, command=Clicked_btn_Num5)
 btn_Num5.grid(row=3, column=1)
 
-btn_Num6 = tk.Button(root, text="6", width=12, height=3)
+btn_Num6 = tk.Button(root, text="6", width=12, height=3, command=Clicked_btn_Num6)
 btn_Num6.grid(row=3, column=2)
 # ====================================================================
 
@@ -110,7 +141,7 @@ btn_Num1.grid(row=4, column=0)
 btn_Num2 = tk.Button(root, text="2", width=12, height=3, command=Clicked_btn_Num2)
 btn_Num2.grid(row=4, column=1)
 
-btn_Num3 = tk.Button(root, text="3", width=12, height=3)
+btn_Num3 = tk.Button(root, text="3", width=12, height=3, command=Clicked_btn_Num3)
 btn_Num3.grid(row=4, column=2)
 
 btn_Equal = tk.Button(root, text="=", width=12, height=7, command= Clicked_btn_Equal)
@@ -118,7 +149,7 @@ btn_Equal.grid(row=4, column=3, rowspan=2)
 # ====================================================================
 
 # ====================================================================
-btn_Num0 = tk.Button(root, text="0", width=26, height=3)
+btn_Num0 = tk.Button(root, text="0", width=26, height=3, command=Clicked_btn_Num0)
 btn_Num0.grid(row=5, column=0, columnspan=2)
 
 btn_Dot = tk.Button(root, text=".", width=12, height=3)
