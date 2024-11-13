@@ -1,29 +1,20 @@
-# This is TKinter Training
-# November 8, 2024
+import tkinter as tk
 
-from tkinter import *
+def display_string():
+    entry_var.set("Hello, Tkinter!")  # Set the string to display in the Entry
 
-print("program start...")
-root = Tk()
-print("started tkinter...")
+root = tk.Tk()
+root.title("Display String in Entry")
 
+# Create a StringVar to hold the text
+entry_var = tk.StringVar()
 
-entry_name = Entry(root, width=50, borderwidth=5)
-entry_name.grid(row=0, column=0)
+# Create an Entry widget with the StringVar
+entry = tk.Entry(root, textvariable=entry_var, width=30)
+entry.pack(pady=10)
 
-
-def myButton_Clicked():
-    text_to_display=""
-    if entry_name.get() == "" :
-        text_to_display = "Name Cannot be empty!"
-    else:
-        text_to_display = "Hello " + entry_name.get() + " Welcome!"
-    myLabel = Label(root, text=text_to_display)
-    myLabel.grid(row=2, column=0)
-
-
-myButton = Button(root, text="Click Me", command=myButton_Clicked)
-myButton.grid(row=1, column=0, sticky="w")
-
+# Create a Button to trigger the string display
+button = tk.Button(root, text="Display Text", command=display_string)
+button.pack(pady=5)
 
 root.mainloop()
