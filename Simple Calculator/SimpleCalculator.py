@@ -3,6 +3,7 @@
 
 import tkinter as tk
 from tkinter import font
+from tkinter import PhotoImage
 
 print("program start...")
 root = tk.Tk()
@@ -12,6 +13,9 @@ root.rowconfigure(1, minsize=5)  # Fix row height for the button
 root.columnconfigure(0, minsize=5)  # Fix column width for consistency
 
 print("started tkinter...")
+
+icon = PhotoImage(file="Simple Calculator/calculator.png")
+root.iconphoto(False, icon)
 
 button_font = font.Font(family="Helvetica", size=8, weight="bold")
 label_font = font.Font(family="Helvetica", size=10, weight="bold")
